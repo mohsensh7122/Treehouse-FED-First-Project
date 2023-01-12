@@ -1,8 +1,8 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
@@ -11,19 +11,21 @@ body {
   color: #222;
   background: #f7f5f0;
 }
+
 /* Link Styles */
 
 a {
   text-decoration: none;
   color: #999;
 }
+
 a:hover {
   color: #6633ff;
 }
 
 /* Section Styles */
 
-.main-nav {
+nav {
   width: 100%;
   background: black;
   min-height: 30px;
@@ -31,6 +33,7 @@ a:hover {
   position: fixed;
   text-align: center;
 }
+
 .nav {
   display: flex;
   justify-content: space-around;
@@ -41,53 +44,62 @@ a:hover {
 }
 
 .nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
+  display: block;
+  margin-right: auto;
+  color: white;
 }
+
 .nav li {
   padding: 5px 10px 10px 10px;
 }
+
 .nav a {
   transition: all .5s;
 }
+
 .nav a:hover {
   color: white
 }
 
-header {
+.mainpage-header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/stars.jpg') no-repeat top center;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
 }
-header {
+
+.mainpage-header {
   line-height: 1.5;
 }
+
 header .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 4px solid #6633ff;
   transition: all .5s;
 }
+
 header .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
 }
+
 .tag {
-  background-color: #efefef;
-  color: black;
+  background-color: #efefef5b;
+  color: white;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
-.location {
-  background-color: #222;
-  color: yellow;
 }
+
+.location {
+  background-color: rgb(34, 34, 34);
+  color: rgb(113, 125, 181);
+}
+
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
@@ -98,6 +110,7 @@ header .profile-image:hover {
   border-radius: 6px;
   transition: all .5s;
 }
+
 .card:hover {
   border-color: #ff99ff;
 }
@@ -110,14 +123,15 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
-  color: white;
+  background: #ce98e0;
+  color: #451f6d;
   padding: 5px 10px;
   margin: 2px;
+  border: 2px solid #451f6d;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: #d0afff;
 }
 
 footer {
@@ -151,35 +165,41 @@ a.social {
   opacity: .4;
   transition: all .5s;
 }
+
 a.twitter {
   background-image: url(images/twitter.svg);
 }
+
 a.linkedin {
   background-image: url(images/linkedin.svg);
 }
+
 a.github {
   background-image: url(images/github.svg);
 }
+
 a.social:hover {
   opacity: 1;
 }
+
 .clearfix {
   clear: both;
 }
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
+
   .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: flex;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
   }
 
-  header {
+  .mainpage-header {
     min-height: 470px;
   }
 
@@ -205,3 +225,66 @@ a.social:hover {
 
 }
 
+
+
+/* Styles for the Experience Pagee */
+
+
+/* Resume's header */
+
+.resume-header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  height: 50px;
+  background-color: #65afd4;
+  text-align: left;
+}
+
+.resume-header h1 {
+  position: relative;
+  bottom: 15px;
+  margin-left: 40px;
+}
+
+
+.resume-main {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.experience {
+  margin-top: 50px;
+}
+
+.resume-list {
+  list-style: none;
+}
+
+
+/* Re-used the code from https://www.w3schools.com/howto/howto_css_image_center.asp */
+
+.resume-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+/* Hobbies page */
+
+.hobbies-header {
+  text-align: center;
+  background: url('images/stars.jpg') no-repeat top center;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.painting-image {
+  max-width: 400px;
+  margin: 0 auto;
+}
